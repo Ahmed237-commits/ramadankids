@@ -1,0 +1,308 @@
+/* ===================================
+   STORIES PAGE STYLES
+   =================================== */
+
+/* === PAGE HEADER === */
+.page-header {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sunny-reading {
+    font-size: 5rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-sm);
+    animation: bounce-in 0.6s ease-out;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    color: var(--sunset-orange);
+    font-weight: 700;
+    animation: fade-in-up 0.8s ease-out;
+}
+
+/* === HOME BUTTON === */
+.home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: white;
+    border: 3px solid var(--moonlight-purple);
+    border-radius: var(--radius-lg);
+    padding: 12px 24px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--moonlight-purple);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.home-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: var(--moonlight-purple);
+    color: white;
+}
+
+.home-icon {
+    font-size: 1.5rem;
+}
+
+/* === STORIES GRID === */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* === STORY CARD === */
+.story-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid var(--sunset-orange);
+    animation: fade-in-up 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.story-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.story-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.story-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.story-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.story-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.story-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--moonlight-purple);
+}
+
+.story-thumbnail {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+    animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.story-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-xs);
+}
+
+.story-time {
+    font-size: 1rem;
+    color: #6B7280;
+    margin-bottom: var(--spacing-sm);
+}
+
+.story-lesson {
+    background: var(--gradient-sunset);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+/* === STORY MODAL === */
+.story-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 200;
+    overflow-y: auto;
+    padding: var(--spacing-lg);
+}
+
+.story-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade-in-up 0.3s ease-out;
+}
+
+.story-content {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    max-width: 800px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    animation: bounce-in 0.5s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.story-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.story-illustration {
+    font-size: 6rem;
+    text-align: center;
+    margin: var(--spacing-md) 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.story-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: var(--spacing-md);
+}
+
+.story-lesson-box {
+    background: var(--soft-lavender);
+    border: 3px solid var(--moonlight-purple);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.story-lesson-box h3 {
+    font-family: var(--font-heading);
+    color: var(--moonlight-purple);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.story-lesson-box p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.story-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+    background: var(--gradient-sunset);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--moonlight-purple);
+    border: 3px solid var(--moonlight-purple);
+}
+
+.btn-secondary:hover {
+    background: var(--moonlight-purple);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--sunset-orange);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg) scale(1.1);
+    background: var(--moonlight-purple);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-content {
+        padding: var(--spacing-lg);
+    }
+
+    .story-content h2 {
+        font-size: 2rem;
+    }
+
+    .story-content p {
+        font-size: 1.1rem;
+    }
+
+    .home-btn {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+}

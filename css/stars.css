@@ -1,0 +1,245 @@
+/* ===================================
+   STARS TRACKER PAGE STYLES
+   =================================== */
+
+.luna-proud {
+    font-size: 6rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* === STAR DISPLAY === */
+.star-display {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: var(--spacing-lg);
+    border: 4px solid var(--star-gold);
+}
+
+.garden-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--moonlight-purple);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.stars-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    min-height: 100px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.collected-star {
+    font-size: 2.5rem;
+    animation: bounce-in 0.3s ease-out;
+    animation-fill-mode: both;
+}
+
+.total-stars {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--sunset-orange);
+}
+
+.total-stars span {
+    color: var(--star-gold);
+}
+
+/* === MILESTONE PROGRESS === */
+.milestone-progress {
+    background: var(--soft-lavender);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    border: 3px solid var(--moonlight-purple);
+}
+
+.milestone-progress h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--moonlight-purple);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-info {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-bar {
+    background: white;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-sunset);
+    border-radius: var(--radius-lg);
+    transition: width 1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+}
+
+/* === ACHIEVEMENTS === */
+.achievements-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.achievements-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--moonlight-purple);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.achievement-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 3px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.achievement-card.unlocked {
+    border-color: var(--star-gold);
+    animation: tada 0.6s ease-in-out;
+}
+
+.achievement-card.locked {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+.achievement-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.achievement-name {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-xs);
+}
+
+.achievement-requirement {
+    font-size: 0.95rem;
+    color: #6B7280;
+    font-weight: 600;
+}
+
+.achievement-card.unlocked .achievement-requirement {
+    color: var(--fresh-green);
+    font-weight: 700;
+}
+
+/* === ACTIVITY LIST === */
+.activity-section {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.activity-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--moonlight-purple);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.activity-item {
+    background: var(--soft-lavender);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    animation: fade-in-up 0.4s ease-out;
+    animation-fill-mode: both;
+}
+
+.activity-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.activity-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.activity-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.activity-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.activity-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.activity-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.activity-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--moonlight-purple);
+}
+
+.empty-message {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: #9CA3AF;
+    font-size: 1.2rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .total-stars {
+        font-size: 2rem;
+    }
+}

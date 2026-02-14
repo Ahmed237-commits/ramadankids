@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stars - Ramadan Adventure</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Stars Counter -->
+    <div class="stars-counter">
+        <div class="star-icon">⭐</div>
+        <div class="star-count" id="starCount">0</div>
+    </div>
+
+    <!-- Home Button -->
+    <button class="home-btn" onclick="goHome()">
+        <span class="home-icon">🏠</span>
+        <span>Home</span>
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <div class="luna-proud">🌙✨</div>
+            <h1 class="page-title">My Ramadan Stars</h1>
+            <p class="page-subtitle">Look at all your amazing achievements! 🎉</p>
+        </div>
+
+        <!-- Star Display -->
+        <div class="star-display">
+            <div class="star-garden">
+                <h2 class="garden-title">Your Star Collection</h2>
+                <div class="stars-collection" id="starsCollection"></div>
+                <p class="total-stars">Total Stars: <span id="totalStars">0</span> ⭐</p>
+            </div>
+        </div>
+
+        <!-- Progress to Next Milestone -->
+        <div class="milestone-progress">
+            <h3>Next Milestone</h3>
+            <div class="progress-info" id="progressInfo"></div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievements-section">
+            <h2 class="achievements-title">🏆 Your Achievements 🏆</h2>
+            <div class="achievements-grid" id="achievementsGrid">
+                <!-- Achievements will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Activity Log -->
+        <div class="activity-section">
+            <h3 class="activity-title">What You've Done</h3>
+            <div class="activity-list" id="activityList"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/stars-tracker.js"></script>
+</body>
+
+</html>

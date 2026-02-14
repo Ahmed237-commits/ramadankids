@@ -1,0 +1,214 @@
+/* ===================================
+   COLORING PAGE STYLES
+   =================================== */
+
+.sunny-coloring {
+    font-size: 5rem;
+    display: inline-block;
+    animation: bounce-subtle 2s ease-in-out infinite;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* === TEMPLATES GRID === */
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.template-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid var(--soft-pink);
+    animation: fade-in-up 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.template-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.template-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.template-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.template-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.template-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--moonlight-purple);
+}
+
+.template-icon {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-md);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.template-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--moonlight-purple);
+}
+
+/* === CANVAS CONTAINER === */
+.canvas-container {
+    animation: fade-in-up 0.5s ease-out;
+}
+
+.back-btn {
+    background: white;
+    border: 3px solid var(--moonlight-purple);
+    color: var(--moonlight-purple);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--moonlight-purple);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* === COLORING WORKSPACE === */
+.coloring-workspace {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: var(--spacing-lg);
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.color-palette,
+.tools-panel {
+    background: var(--soft-lavender);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+}
+
+.color-palette h3,
+.tools-panel h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.color-option {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+.color-option.selected {
+    border-color: var(--moonlight-purple);
+    transform: scale(1.15);
+}
+
+/* === CANVAS AREA === */
+.canvas-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gentle-sky);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+}
+
+#coloringCanvas {
+    background: white;
+    border: 3px solid var(--moonlight-purple);
+    border-radius: var(--radius-sm);
+    cursor: crosshair;
+    max-width: 100%;
+    box-shadow: var(--shadow-md);
+}
+
+/* === TOOLS PANEL === */
+.tools-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.tool-btn {
+    padding: 12px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    background: white;
+    border: 2px solid var(--sky-blue);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--moonlight-purple);
+}
+
+.tool-btn:hover {
+    background: var(--sky-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+    .coloring-workspace {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .color-palette,
+    .tools-panel {
+        grid-column: 1;
+    }
+
+    .color-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .tools-panel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .templates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

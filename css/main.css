@@ -1,0 +1,412 @@
+/* ===================================
+   RAMADAN KIDS WEBSITE - MAIN STYLES
+   Design System & Global Styles
+   =================================== */
+
+/* === CSS CUSTOM PROPERTIES === */
+:root {
+    /* Primary Colors */
+    --moonlight-purple: #8B5CF6;
+    --star-gold: #FBBF24;
+    --sunset-orange: #FB923C;
+    --sky-blue: #3B82F6;
+    
+    /* Secondary Colors */
+    --soft-pink: #F9A8D4;
+    --fresh-green: #4ADE80;
+    
+    /* Background Colors */
+    --light-cream: #FFF7ED;
+    --soft-lavender: #F3E8FF;
+    --gentle-sky: #DBEAFE;
+    
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, #FBBF24 0%, #FB923C 50%, #F9A8D4 100%);
+    --gradient-night: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+    --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 247, 237, 0.95));
+    
+    /* Typography */
+    --font-heading: 'Fredoka One', cursive;
+    --font-body: 'Nunito', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+    --radius-full: 50%;
+    
+    /* Shadows */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 25px rgba(139, 92, 246, 0.2);
+    --shadow-lg: 0 20px 40px rgba(139, 92, 246, 0.3);
+    --shadow-glow: 0 0 30px rgba(251, 191, 36, 0.4);
+}
+
+/* === GLOBAL RESET & BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(to bottom, var(--soft-lavender), var(--light-cream), var(--gentle-sky));
+    min-height: 100vh;
+    color: #4B5563;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* === CONTAINER === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    position: relative;
+    z-index: 2;
+}
+
+/* === STARS COUNTER (TOP RIGHT) === */
+.stars-counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 12px 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+    animation: bounce-in 0.6s ease-out;
+    border: 3px solid var(--star-gold);
+}
+
+.star-icon {
+    font-size: 2rem;
+    animation: spin-slow 3s linear infinite;
+}
+
+.star-count {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--moonlight-purple);
+    min-width: 40px;
+    text-align: center;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.mascot-luna {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    animation: float 3s ease-in-out infinite;
+}
+
+.luna-body {
+    font-size: 8rem;
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6));
+    animation: wave 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+.luna-hat {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-15deg);
+    font-size: 3rem;
+    animation: hat-wiggle 2s ease-in-out infinite;
+}
+
+.luna-star {
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    font-size: 2rem;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.greeting-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-md);
+}
+
+/* === SECTION GRID === */
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* === SECTION CARDS === */
+.section-card {
+    background: var(--gradient-card);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid white;
+    cursor: pointer;
+    min-height: 220px;
+    justify-content: center;
+}
+
+.section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-sunset);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.section-card:hover::before {
+    opacity: 0.1;
+}
+
+.section-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-card:active {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+    animation: bounce-subtle 2s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--moonlight-purple);
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    z-index: 1;
+}
+
+.card-description {
+    font-size: 1.1rem;
+    color: #6B7280;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.card-decoration {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 2rem;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Individual Card Colors */
+.stories-card {
+    border-color: var(--sunset-orange);
+}
+
+.games-card {
+    border-color: var(--sky-blue);
+}
+
+.stars-card {
+    border-color: var(--star-gold);
+}
+
+.coloring-card {
+    border-color: var(--soft-pink);
+}
+
+.reflection-card {
+    border-color: var(--fresh-green);
+}
+
+/* === SUNNY MASCOT (BOTTOM) === */
+.mascot-sunny {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+}
+
+.sunny-body {
+    font-size: 6rem;
+    display: inline-block;
+    animation: glow-pulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(251, 147, 60, 0.6));
+}
+
+.sunny-message {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--sunset-orange);
+    margin-top: var(--spacing-sm);
+    animation: fade-in-up 1s ease-out 0.5s both;
+}
+
+/* === FLOATING STARS BACKGROUND === */
+.floating-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.float-star {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: float-random 15s ease-in-out infinite;
+}
+
+.float-star:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.float-star:nth-child(2) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.float-star:nth-child(3) {
+    top: 60%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+.float-star:nth-child(4) {
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.float-star:nth-child(5) {
+    top: 40%;
+    left: 50%;
+    animation-delay: 3s;
+}
+
+.float-star:nth-child(6) {
+    bottom: 10%;
+    left: 30%;
+    animation-delay: 5s;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .luna-body {
+        font-size: 5rem;
+    }
+    
+    .greeting-text {
+        font-size: 1.2rem;
+    }
+    
+    .section-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .stars-counter {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+    }
+    
+    .star-icon {
+        font-size: 1.5rem;
+    }
+    
+    .star-count {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: var(--spacing-sm);
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* === UTILITY CLASSES === */
+.text-center {
+    text-align: center;
+}
+
+.mb-1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.mt-2 {
+    margin-top: var(--spacing-md);
+}

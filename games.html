@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Games - Ramadan Adventure</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href=" crossorigin>
+    <link href=" https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Stars Counter -->
+    <div class="stars-counter">
+        <div class="star-icon">⭐</div>
+        <div class="star-count" id="starCount">0</div>
+    </div>
+
+    <!-- Home Button -->
+    <button class="home-btn" onclick="goHome()">
+        <span class="home-icon">🏠</span>
+        <span>Home</span>
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <div class="luna-gaming">🎮</div>
+            <h1 class="page-title">Educational Games</h1>
+            <p class="page-subtitle">Play, learn, and have fun! 🌟</p>
+        </div>
+
+        <!-- Games Menu -->
+        <div id="gamesMenu" class="games-grid">
+            <!-- Game 1: Memory Match -->
+            <div class="game-card" onclick="startGame('memory')">
+                <div class="game-icon">🎯</div>
+                <h3 class="game-title">Memory Match</h3>
+                <p class="game-description">Find matching Ramadan pairs!</p>
+                <div class="game-reward">⭐ 1 Star</div>
+            </div>
+
+            <!-- Game 2: Good Deeds Garden -->
+            <div class="game-card" onclick="startGame('garden')">
+                <div class="game-icon">🌸</div>
+                <h3 class="game-title">Good Deeds Garden</h3>
+                <p class="game-description">Grow flowers with kindness!</p>
+                <div class="game-reward">⭐ 2 Stars</div>
+            </div>
+
+            <!-- Game 3: Ramadan Quiz -->
+            <div class="game-card" onclick="startGame('quiz')">
+                <div class="game-icon">❓</div>
+                <h3 class="game-title">Ramadan Quiz</h3>
+                <p class="game-description">Answer fun questions!</p>
+                <div class="game-reward">⭐ 2 Stars</div>
+            </div>
+        </div>
+
+        <!-- Game Container -->
+        <div id="gameContainer" class="game-container" style="display: none;">
+            <!-- Game content will be inserted here -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/games.js"></script>
+</body>
+
+</html>

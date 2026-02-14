@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedtime Stories - Ramadan Adventure</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/stories.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Stars Counter -->
+    <div class="stars-counter">
+        <div class="star-icon">⭐</div>
+        <div class="star-count" id="starCount">0</div>
+    </div>
+
+    <!-- Home Button -->
+    <button class="home-btn" onclick="goHome()">
+        <span class="home-icon">🏠</span>
+        <span>Home</span>
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <div class="sunny-reading">📖</div>
+            <h1 class="page-title">Bedtime Stories Before Iftar</h1>
+            <p class="page-subtitle">Short, fun stories with beautiful lessons! 🌟</p>
+        </div>
+
+        <!-- Story Library -->
+        <div class="stories-grid">
+            <!-- Story 1: The Thirsty Bird -->
+            <div class="story-card" onclick="showStory('thirsty-bird')">
+                <div class="story-thumbnail">🐦💧</div>
+                <h3 class="story-title">The Thirsty Bird</h3>
+                <p class="story-time">⏱️ 2 minutes</p>
+                <div class="story-lesson">💙 Kindness & Helping Others</div>
+            </div>
+
+            <!-- Story 2: The Generous Dates -->
+            <div class="story-card" onclick="showStory('generous-dates')">
+                <div class="story-thumbnail">🌴🤝</div>
+                <h3 class="story-title">The Generous Dates</h3>
+                <p class="story-time">⏱️ 2 minutes</p>
+                <div class="story-lesson">💚 Sharing is Caring</div>
+            </div>
+
+            <!-- Story 3: The Light of the Lantern -->
+            <div class="story-card" onclick="showStory('lantern-light')">
+                <div class="story-thumbnail">🏮✨</div>
+                <h3 class="story-title">The Light of the Lantern</h3>
+                <p class="story-time">⏱️ 3 minutes</p>
+                <div class="story-lesson">💡 Being Patient</div>
+            </div>
+
+            <!-- Story 4: The Honest Helper -->
+            <div class="story-card" onclick="showStory('honest-helper')">
+                <div class="story-thumbnail">👦🎁</div>
+                <h3 class="story-title">The Honest Helper</h3>
+                <p class="story-time">⏱️ 2 minutes</p>
+                <div class="story-lesson">⭐ Honesty Wins</div>
+            </div>
+
+            <!-- Story 5: The Moon's Smile -->
+            <div class="story-card" onclick="showStory('moon-smile')">
+                <div class="story-thumbnail">🌙😊</div>
+                <h3 class="story-title">The Moon's Smile</h3>
+                <p class="story-time">⏱️ 2 minutes</p>
+                <div class="story-lesson">💜 Making Others Happy</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story Modal -->
+    <div id="storyModal" class="story-modal">
+        <div class="story-content" id="storyContent">
+            <!-- Story content will be inserted here -->
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/stories.js"></script>
+</body>
+
+</html>

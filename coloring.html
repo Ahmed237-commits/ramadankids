@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring Pages - Ramadan Adventure</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/coloring.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Stars Counter -->
+    <div class="stars-counter">
+        <div class="star-icon">⭐</div>
+        <div class="star-count" id="starCount">0</div>
+    </div>
+
+    <!-- Home Button -->
+    <button class="home-btn" onclick="goHome()">
+        <span class="home-icon">🏠</span>
+        <span>Home</span>
+    </button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <div class="sunny-coloring">🎨</div>
+            <h1 class="page-title">Ramadan Coloring Pages</h1>
+            <p class="page-subtitle">Color beautiful Ramadan pictures! 🖍️</p>
+        </div>
+
+        <!-- Coloring Templates -->
+        <div id="templatesGrid" class="templates-grid">
+            <div class="template-card" onclick="selectTemplate('lantern')">
+                <div class="template-icon">🏮</div>
+                <h3>Ramadan Lantern</h3>
+            </div>
+            <div class="template-card" onclick="selectTemplate('moon')">
+                <div class="template-icon">🌙</div>
+                <h3>Crescent Moon</h3>
+            </div>
+            <div class="template-card" onclick="selectTemplate('mosque')">
+                <div class="template-icon">🕌</div>
+                <h3>Beautiful Mosque</h3>
+            </div>
+            <div class="template-card" onclick="selectTemplate('family')">
+                <div class="template-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Iftar</h3>
+            </div>
+        </div>
+
+        <!-- Canvas Container -->
+        <div id="canvasContainer" class="canvas-container" style="display: none;">
+            <button class="back-btn" onclick="backToTemplates()">⬅️ Choose Another</button>
+
+            <div class="coloring-workspace">
+                <!-- Color Palette -->
+                <div class="color-palette">
+                    <h3>Pick a Color 🎨</h3>
+                    <div class="color-grid"></div>
+                </div>
+
+                <!-- Canvas -->
+                <div class="canvas-area">
+                    <canvas id="coloringCanvas"></canvas>
+                </div>
+
+                <!-- Tools -->
+                <div class="tools-panel">
+                    <h3>Tools</h3>
+                    <button class="tool-btn" onclick="downloadImage()">📥 Save</button>
+                    <button class="tool-btn" onclick="clearCanvas()">🗑️ Clear</button>
+                    <button class="tool-btn" onclick="finishColoring()">✅ Finish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/coloring.js"></script>
+</body>
+
+</html>
